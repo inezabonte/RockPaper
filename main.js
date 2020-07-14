@@ -2,9 +2,8 @@ const rock = document.querySelector(".rock")
 const paper = document.querySelector(".paper")
 const scissor = document.querySelector(".scissor")
 let result = document.querySelector(".result")
-const scoreboard = document.querySelector(".scoreboard")
-
-
+let compRes = document.querySelector(".comp span")
+let userRes = document.querySelector(".user span")
 let compChoice = Math.ceil(Math.random()*3)
 
 let userScore = 0
@@ -21,12 +20,14 @@ rock.addEventListener('click', () => {
             break;
         case 2:
             result.innerHTML = "You lose I chose paper"
-            scoreboard.querySelector(".comp span").innerHTML = compScore += 1
+            compScore++
+            compRes.innerHTML = compScore
             
             break;
         default:
             result.innerHTML = "You win i chose scissor"
-            scoreboard.querySelector(".user span").innerHTML = userScore += 1
+            userScore++
+            userRes.innerHTML = userScore
             break;
     }
 })
@@ -39,12 +40,16 @@ paper.addEventListener('click', () => {
     switch (compChoice) {
         case 1:
             result.innerHTML = "You win i chose rock"
+            userScore++
+            userRes.innerHTML = userScore
             break;
         case 2:
             result.innerHTML = "It's a draw"
             break;
         default:
             result.innerHTML = "You lose I chose scissor"
+            compScore++
+            compRes.innerHTML = compScore
             break;
     }
 })
@@ -57,9 +62,13 @@ scissor.addEventListener('click', () => {
     switch (compChoice) {
         case 1:
             result.innerHTML = "You lose i chose rock"
+            compScore++
+            compRes.innerHTML = compScore
             break;
         case 2:
             result.innerHTML = "You win I chose paper"
+            userScore++
+            userRes.innerHTML = userScore
             break;
         default:
             result.innerHTML = "It's a draw"
