@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.scoreboard{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 50px
+}
+
+.container{
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: brown;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.choice:hover{
+    background-color: rgb(151, 29, 29);
+    cursor: pointer;
+}
+
+.choice:active{
+    transform: scale(0.98);
+}
+
+
+.result{
+    color: white;
+}
