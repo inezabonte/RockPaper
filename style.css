@@ -2,15 +2,26 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 body{
-    background-color: darkslateblue;
+    background-color: rgb(64, 61, 88);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header{
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: rgb(64, 61, 88);
+
 }
 
 .scoreboard{
@@ -38,13 +49,14 @@ body{
     width: 100px;
     height: 100px;
     color: white;
-    background-color: brown;
+    background-color: rgb(38, 84, 136);
+    
     border-radius: 50px;
     transition: all 0.3s;
 }
 
 .choice:hover{
-    background-color: rgb(151, 29, 29);
+    background-color: rgb(40, 88, 150);
     cursor: pointer;
 }
 
@@ -55,4 +67,10 @@ body{
 
 .result{
     color: white;
+    font-size: 20px;
+    margin: 20px;
+}
+
+img{
+    width: 100px;
 }
