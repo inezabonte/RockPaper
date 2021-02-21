@@ -25,11 +25,17 @@ header{
 }
 
 .scoreboard{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+    background-color: transparent;
     width: 100px;
-    height: 50px
+    height: 30px;
+    border: white solid;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    position: relative;
 }
 
 .container{
@@ -40,6 +46,8 @@ header{
     align-items: center;
     justify-content: center;
     justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px #00000059;
 }
 
 .choice{
@@ -56,7 +64,7 @@ header{
 }
 
 .choice:hover{
-    background-color: rgb(40, 88, 150);
+    background-color: rgb(33, 68, 114);
     cursor: pointer;
 }
 
@@ -73,4 +81,23 @@ header{
 
 img{
     width: 100px;
+}
+
+.badge{
+    background-color: rgb(214, 13, 13);
+    width: 40px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+#user-badge{
+    position: absolute;
+    left: -20px
+    
+}
+
+#comp-badge{
+    position: absolute;
+    right: -20px
+    
 }
